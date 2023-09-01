@@ -4,9 +4,10 @@ class Team:
     """
     Clase para modelar a un equipo de valorant
     """
-    def __init__(self, name):
+    def __init__(self, name, mapa, winrate):
         self.name = name
-        self.players = []
+        self.mapa = mapa
+        self.winrate = winrate
 
     def add_player(self, player):
         self.players.append(player)

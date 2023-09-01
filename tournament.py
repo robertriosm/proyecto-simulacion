@@ -1,12 +1,12 @@
 import random
-from player import Player
+from mapa import Mapa
 from team import Team
 from collections import Counter
 
 
 class Tournament:
     """
-    Clase para modelar un torneo de valorant de 32x32 equipos con 5 jugadores cada uno, puede ejecutar varios
+    Clase para modelar un torneo de valorant de 16-16 equipos, puede ejecutar varios
     torneos y mostrar a los equipos que mas torneos han ganado
     """
 
@@ -51,7 +51,6 @@ class Tournament:
             weapon_damage = random.randint(15, 30)
             special_ability = random.uniform(1.1, 1.5)
             skill_level = random.uniform(0.8, 1.2)
-            team.add_player(Player(player_name, health, shield, weapon_damage, special_ability, skill_level))
         return team
 
 
@@ -67,7 +66,7 @@ class Tournament:
             team2 = teams[i + 1]
             winner = self.simulate_encounter(team1, team2)
             winners.append(winner)
-        return winners
+        return winners # 3 de 5 mapas 
 
 
 
@@ -75,8 +74,8 @@ class Tournament:
         """
         Función para simular un torneo completo
         """
-        # Crear 64 equipos
-        all_teams = [self.create_random_team(f"Team{i+1}") for i in range(64)]
+        # Crear 16-16 equipos
+        all_teams = [self.create_random_team(f"Team{i+1}") for i in range(32)]
         
         # Iniciar el torneo
         remaining_teams = all_teams
