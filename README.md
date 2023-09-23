@@ -5,6 +5,7 @@
 - Roberto Rios
 - Oscar Estrada
 - Joshua Chicoj
+- Maria Jose Gil
 
 ### Referencias
 
