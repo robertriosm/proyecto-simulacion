@@ -2,7 +2,7 @@
 # Clase para representar a un equipo
 class Team:
     """
-    Clase para modelar a un equipo de valorant
+    Abstraccion para modelar a un equipo de overwatch
     """
     def __init__(self, name, mapa, winrate):
         self.name = name
